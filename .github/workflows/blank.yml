@@ -1,0 +1,13 @@
+name: Call API every minute
+
+on:
+  schedule:
+    - cron: "* * * * *" # mỗi phút 1 lần
+  workflow_dispatch:     # để bạn chạy thủ công nếu cần
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gọi API
+        run: curl -X GET https://api.telegram.org/bot7519504678:AAG2FsI2TbpRQxsUQ8RCvcIUufVIXY1nDj0/getUpdates
