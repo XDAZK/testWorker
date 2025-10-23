@@ -3,7 +3,7 @@ on:
   schedule:
     # Chạy mỗi 5 phút
     - cron: '*/5 * * * *'
-
+  workflow_dispatch: 
 jobs:
   thuc_thi:
     runs-on: ubuntu-latest
