@@ -1,0 +1,12 @@
+name: Chạy mỗi 5 phút
+on:
+  schedule:
+    # Chạy mỗi 5 phút
+    - cron: '*/5 * * * *'
+
+jobs:
+  thuc_thi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm tra
+        run: echo "Action này chạy mỗi 5 phút!"
